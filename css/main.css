@@ -97,6 +97,61 @@ div {
 
   background-color: orange;
   border-radius: 50%;
+    transition: -moz-transition: all 350ms ease-in-out;
+	-o-transition: all 350ms ease-in-out;
+	-webkit-transition: all 350ms ease-in-out;
+	transition: all 350ms ease-in-out;
+}
+
+@-webkit-keyframes ball-bounce {
+    0% {
+        top: 10px;
+        right: 0;
+    }
+    25% {
+        top: -20px;
+    }
+    50% {
+        top: 30px;
+    }
+    75% {
+        top: -40px;
+    }
+    90% {
+        top: 30;
+    }
+    100% {
+        top: -40px;
+        right: 50px;
+    }
+}
+
+@keyframes ball-bounce {
+    0% {
+        top: 10px;
+        right: 0;
+    }
+    25% {
+        top: -20px;
+    }
+    50% {
+        top: 30px;
+    }
+    75% {
+        top: -40px;
+    }
+    90% {
+        top: 30;
+    }
+    100% {
+        top: -40px;
+        right: 50px;
+    }
+}
+
+.js-ball-bounce {
+    -webkit-animation: ball-bounce 1s linear;
+    animation: ball-bounce 1s linear;
 }
 
 .list {

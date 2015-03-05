@@ -4,6 +4,8 @@ var $btnShowHide = $('.btn-show-hide');
 var $box = $('.box');
 var $btnMove =$('.btn-move');
 var $diamond =$('.diamond');
+var $btnBounce =$('.btn-bounce');
+var $circle =$('.circle');
 
 
 $btnExpandPanel.on('click', function () {
@@ -16,4 +18,12 @@ $btnShowHide.on('click', function () {
 
 $btnMove.on('click', function () {
     $diamond.toggleClass('js-movein-moveout');
+});
+
+$btnBounce.on('click', function () {
+              $circle.addClass('js-ball-bounce');
+});
+
+$circle.on('webkitAnimationEnd animationend', function () {
+    $circle.removeClass('js-ball-bounce');
 });
