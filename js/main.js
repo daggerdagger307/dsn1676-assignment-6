@@ -7,6 +7,9 @@ var $diamond =$('.diamond');
 var $btnBounce =$('.btn-bounce');
 var $circle =$('.circle');
 
+var $btnAppend = $('.btn-append');
+var $list = $('.list');
+
 
 $btnExpandPanel.on('click', function () {
     $panel.toggleClass('js-expand-panel');
@@ -27,3 +30,14 @@ $btnBounce.on('click', function () {
 $circle.on('webkitAnimationEnd animationend', function () {
     $circle.removeClass('js-ball-bounce');
 });
+
+$btnAppend.on('click', function () {
+    
+    var $li = $('<li>Here We go!</li>');
+    
+    $list.prepend($li);
+    $li.toggleClass('js-complete');
+    
+});
+
+

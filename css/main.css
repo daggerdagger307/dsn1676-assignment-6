@@ -170,9 +170,37 @@ div {
 
 .list li {
   padding: 0.5em;
-
+    max-height: 0;
   background-color: plum;
   border: 1px solid mediumpurple;
 
   color: mediumpurple;
+}
+
+
+.js-complete {
+    -webkit-animation: complete 1s linear forwards;
+    animation: complete 1s linear forwards;
+    overflow: hidden;
+
+}
+
+@-webkit-keyframes complete {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 2em;
+    }
+    
+}
+
+@keyframes complete {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 2em;
+    }
+    
 }
